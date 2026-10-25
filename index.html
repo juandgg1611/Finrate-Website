@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinRate, tasas BCV y Binance P2P en tiempo real</title>
+  <meta name="description" content="FinRate es la app para convertir USD, EUR, USDT y Bolívares con tasas del BCV y Binance P2P en tiempo real. Calculadora integrada, alertas inteligentes, historial y gráficas." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <meta property="og:title" content="FinRate: todas tus divisas en una sola app" />
+  <meta property="og:description" content="Tasas BCV y Binance P2P en tiempo real, calculadora integrada, alertas inteligentes y mucho más." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/icon.png" />
+
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="bg-hex" aria-hidden="true"></div>
+
+  <header class="nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/icon.png" alt="" class="brand-icon" />
+        <span class="brand-word">Fin<span class="accent">Rate</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#caracteristicas" data-nav>Características</a>
+        <a href="#fuentes" data-nav>Fuentes</a>
+        <a href="#faq" data-nav>Preguntas</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#descargar" class="btn btn-solid" data-store-url="">Descargar</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#caracteristicas" data-nav>Características</a>
+    <a href="#fuentes" data-nav>Fuentes</a>
+    <a href="#faq" data-nav>Preguntas</a>
+    <a href="#descargar" class="btn btn-solid" data-nav>Descargar app</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-eyebrow"><span class="hero-dot"></span> BCV y Binance P2P, en vivo</div>
+      <h1 class="hero-title">Todas tus divisas.<br /><span class="grad">Una sola app.</span></h1>
+      <p class="hero-sub">
+        Convierte USD, EUR, USDT y Bolívares con tasas actualizadas cada 5 minutos.
+        Calculadora, historial, gráficas y alertas, en un solo lugar.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-solid btn-lg btn-store js-store-link" aria-label="Descargar en Google Play" data-store-url="" target="_blank" rel="noopener"><img class="store-logo" src="assets/google-play.webp" alt="" /><span class="store-label"><small>Disponible en</small>Google Play</span></a>
+        <a href="#caracteristicas" class="btn btn-line btn-lg">Ver qué incluye <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+      <div class="stage" data-reveal>
+        <div class="stage-rays" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="stage-floor-wrap" aria-hidden="true"><div class="stage-plane"></div></div>
+        <div class="stage-floor" aria-hidden="true"></div>
+
+        <div class="coin coin-usd" aria-hidden="true"><img src="assets/flags/USA.png" alt="" /></div>
+        <div class="coin coin-eur" aria-hidden="true"><img src="assets/flags/EU.png" alt="" /></div>
+        <div class="coin coin-usdt" aria-hidden="true"><img src="assets/flags/TT.png" alt="" /></div>
+        <div class="coin coin-ves" aria-hidden="true"><img src="assets/flags/VE.jpg" alt="" /></div>
+
+        <div class="phone3d" id="phone3d">
+          <div class="phone3d-body">
+            <div class="phone3d-back"></div>
+            <div class="phone3d-front">
+              <img src="assets/clean/conversion.png" alt="Pantalla principal de FinRate mostrando la conversión de USD a bolívares" loading="eager" />
+              <span class="phone3d-gloss"></span>
+            </div>
+          </div>
+          <div class="phone3d-shadow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TASAS EN VIVO ===== -->
+    <section class="live" id="tasas">
+      <div class="live-head" data-reveal>
+        <span class="live-badge"><span class="hero-dot"></span> Tasas en vivo</span>
+        <span class="live-note" id="liveNote">Valores de referencia</span>
+      </div>
+
+      <div class="live-row" data-reveal>
+        <div class="rate">
+          <img class="rate-flag" src="assets/flags/USA.png" alt="" />
+          <span class="rate-val"><i>Bs.</i> <b data-rate="usd" data-fallback="887.30">887,30</b></span>
+          <span class="rate-label">Dólar oficial · BCV</span>
+        </div>
+        <div class="rate">
+          <img class="rate-flag" src="assets/flags/EU.png" alt="" />
+          <span class="rate-val"><i>Bs.</i> <b data-rate="eur" data-fallback="994.04">994,04</b></span>
+          <span class="rate-label">Euro oficial · BCV</span>
+        </div>
+        <div class="rate">
+          <img class="rate-flag" src="assets/flags/TT.png" alt="" />
+          <span class="rate-val"><i>Bs.</i> <b data-rate="usdt" data-fallback="1006">1.006,00</b></span>
+          <span class="rate-label">USDT · Binance P2P</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUÉ HACE ===== -->
+    <section id="caracteristicas" class="wide feat">
+      <div class="feat-grid">
+        <div class="feat-intro" data-reveal>
+          <span class="eyebrow">Qué incluye</span>
+          <h2>Todo lo que necesitas para no perder una tasa</h2>
+          <p>Seis herramientas pensadas para el día a día: conviertes, calculas, te avisan y consultas el historial sin salir de la app.</p>
+          <div class="feat-flags">
+            <img src="assets/flags/USA.png" alt="USD" /><img src="assets/flags/EU.png" alt="EUR" /><img src="assets/flags/TT.png" alt="USDT" /><img src="assets/flags/VE.jpg" alt="VES" />
+            <span>USD · EUR · USDT · VES</span>
+          </div>
+        </div>
+
+        <div class="flist">
+        <div class="frow" data-reveal data-reveal-delay="0">
+          <span class="frow-num">01</span>
+          <div>
+            <h3>Conversión en tiempo real</h3>
+            <p>USD, EUR, USDT y Bolívares con tasas oficiales del BCV y del mercado Binance P2P, actualizadas automáticamente cada 5 minutos.</p>
+          </div>
+        </div>
+        <div class="frow" data-reveal data-reveal-delay="70">
+          <span class="frow-num">02</span>
+          <div>
+            <h3>Calculadora + pago mixto</h3>
+            <p>Calcula, convierte y resuelve pagos combinados (efectivo + divisa) sin salir de la app.</p>
+          </div>
+        </div>
+        <div class="frow" data-reveal data-reveal-delay="140">
+          <span class="frow-num">03</span>
+          <div>
+            <h3>Alertas inteligentes</h3>
+            <p>Notificaciones al instante cuando el BCV actualiza o el USDT se mueve bruscamente, con sugerencia de cuándo comprar o vender.</p>
+          </div>
+        </div>
+        <div class="frow" data-reveal data-reveal-delay="210">
+          <span class="frow-num">04</span>
+          <div>
+            <h3>Historial y calendario</h3>
+            <p>Consulta tasas pasadas y anticípate a los días sin actividad bancaria.</p>
+          </div>
+        </div>
+        <div class="frow" data-reveal data-reveal-delay="280">
+          <span class="frow-num">05</span>
+          <div>
+            <h3>Gráficas de tendencia</h3>
+            <p>Explora el comportamiento de USD, EUR y USDT en 1 semana, 1 mes, 3 meses o 1 año.</p>
+          </div>
+        </div>
+        <div class="frow" data-reveal data-reveal-delay="350">
+          <span class="frow-num">06</span>
+          <div>
+            <h3>Exporta y comparte</h3>
+            <p>Genera PDF o imagen de tus conversiones y compártelas por WhatsApp, correo o donde la necesites.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FUENTES ===== -->
+    <section id="fuentes" class="wide src">
+      <div class="head head-center" data-reveal>
+        <span class="eyebrow">Fuentes confiables</span>
+        <h2>Datos que puedes verificar</h2>
+        <p>FinRate refleja valores de referencia obtenidos de fuentes verificables. No representamos ni estamos afiliados a ninguna institución gubernamental o financiera.</p>
+      </div>
+
+      <div class="pipe" data-reveal>
+        <svg class="pipe-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 34 25 C 41 25, 40 50, 45 50" />
+          <path d="M 34 75 C 41 75, 40 50, 45 50" />
+          <path d="M 55 50 L 66 50" />
+        </svg>
+
+        <div class="pipe-left">
+          <div class="pnode">
+            <span class="pnode-icons"><img src="assets/flags/VE.jpg" alt="Venezuela" /><img src="assets/flags/USA.png" alt="USD" /><img src="assets/flags/EU.png" alt="EUR" /></span>
+            <div>
+              <strong>Banco Central de Venezuela</strong>
+              <span>Tasa oficial de USD y EUR, reproducida tal como se publica.</span>
+            </div>
+          </div>
+          <div class="pnode">
+            <span class="pnode-icons"><img src="assets/flags/TT.png" alt="USDT" /></span>
+            <div>
+              <strong>Binance P2P</strong>
+              <span>Referencia estadística de anuncios verificados del mercado.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pipe-core">
+          <div class="core-orb"><i></i><i></i><img src="assets/icon.png" alt="FinRate" /></div>
+          <strong>FinRate</strong>
+          <span>Se actualiza cada 5 minutos</span>
+        </div>
+
+        <div class="pipe-right">
+          <div class="pnode pnode-phone">
+            <img src="assets/clean/conversion.png" alt="" />
+            <div>
+              <strong>Tu teléfono</strong>
+              <span>Conversión, historial y alertas al instante.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="src-action" data-reveal>
+        <a href="privacy.html" class="btn btn-line">Ver política de privacidad completa</a>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="wide faq">
+      <div class="faq-grid">
+        <div class="faq-side" data-reveal>
+          <span class="faq-mark" aria-hidden="true">?</span>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Lo que debes saber</h2>
+          <p>¿Tienes otra duda? Escríbenos y te respondemos.</p>
+          <a href="mailto:juandgg11o@gmail.com?subject=Consulta%20sobre%20FinRate" class="btn btn-line">Escríbenos</a>
+        </div>
+
+        <div class="faq-list" data-reveal>
+        <details class="faq-item" open>
+          <summary>¿FinRate tiene algún costo?</summary>
+          <p>No. FinRate es completamente gratuita para descargar y usar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cada cuánto se actualizan las tasas?</summary>
+          <p>Las tasas de BCV y Binance P2P se actualizan cada 5 minutos dentro de la app.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿FinRate está afiliada al BCV o a Binance?</summary>
+          <p>No. FinRate es una aplicación informativa e independiente que refleja valores de referencia públicos, sin afiliación con ninguna institución gubernamental o financiera.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿En qué dispositivos está disponible?</summary>
+          <p>FinRate está disponible en Google Play para dispositivos Android.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿FinRate guarda mis datos personales?</summary>
+          <p>No. FinRate no pide cuenta ni datos personales. Si activas las notificaciones, solo se guarda un identificador técnico del dispositivo para poder enviártelas. Detalles completos en la <a href="privacy.html">política de privacidad</a>.</p>
+        </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta" id="descargar">
+      <h2>Descarga FinRate y no vuelvas a perder una tasa</h2>
+      <p>Disponible ahora para Android, totalmente gratis.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-solid btn-lg btn-store js-store-link" aria-label="Descargar en Google Play" data-store-url="" target="_blank" rel="noopener"><img class="store-logo" src="assets/google-play.webp" alt="" /><span class="store-label"><small>Disponible en</small>Google Play</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img src="assets/icon.png" alt="" class="brand-icon" />
+          <span class="brand-word">Fin<span class="accent">Rate</span></span>
+        </a>
+        <p>Tu centro de mando financiero.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="#caracteristicas">Características</a>
+        <a href="#fuentes">Fuentes</a>
+        <a href="#faq">Preguntas</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Política de privacidad</a>
+        <a href="terms.html">Términos y condiciones</a>
+        <a href="terms.html#descargo">Descargo de responsabilidad</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:juandgg11o@gmail.com?subject=Consulta%20sobre%20FinRate">juandgg11o@gmail.com</a>
+        <a href="https://github.com/juandgg1611/Venezuelan-Currency-Converter-Mobile-app" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> FinRate. Todos los derechos reservados.</span>
+      <span>No afiliada al BCV ni a Binance · Información de referencia, no asesoría financiera.</span>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/584246801808?text=Hola%2C%20tengo%20una%20duda%20sobre%20FinRate" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="wa-tip">¿Dudas? Escríbenos</span>
+    <span class="wa-btn">
+      <span class="wa-pulse"></span><span class="wa-pulse wa-pulse-2"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

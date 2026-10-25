@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad de FinRate</title>
+  <meta name="description" content="Política de privacidad de FinRate: qué datos se recopilan, cómo se usan las notificaciones push y de dónde vienen las tasas de cambio." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="legal-topbar">
+    <div class="legal-topbar-inner">
+      <a href="index.html" class="legal-back">
+        <img src="assets/icon.png" alt="" />
+        <span>
+          <small>← Volver a</small>
+          Fin<span class="accent">Rate</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <main class="legal-main">
+    <div class="legal-hero">
+      <h1>Política de Privacidad</h1>
+      <p class="legal-updated">Última actualización: 25 de octubre de 2026</p>
+    </div>
+
+    <div class="legal-callout">
+      <strong>En resumen:</strong> FinRate no pide cuenta, no pide tus datos personales y no muestra publicidad. Lo único que se guarda fuera de tu teléfono es, si tú activas las notificaciones, un identificador técnico de tu dispositivo (token push) para poder avisarte cuando cambian las tasas.
+    </div>
+
+    <div class="legal-index">
+      <h2>Índice</h2>
+      <ol>
+        <li><a href="#origen">1. Origen de los datos que mostramos</a></li>
+        <li><a href="#recopilamos">2. Qué información recopilamos</a></li>
+        <li><a href="#notificaciones">3. Notificaciones push</a></li>
+        <li><a href="#almacenamiento">4. Almacenamiento en tu dispositivo</a></li>
+        <li><a href="#terceros">5. Servicios de terceros que usamos</a></li>
+        <li><a href="#permisos">6. Permisos del sistema</a></li>
+        <li><a href="#seguridad">7. Seguridad</a></li>
+        <li><a href="#menores">8. Menores de edad</a></li>
+        <li><a href="#derechos">9. Tus derechos y cómo borrar tus datos</a></li>
+        <li><a href="#cambios">10. Cambios en esta política</a></li>
+        <li><a href="#contacto">11. Contacto</a></li>
+      </ol>
+    </div>
+
+    <p><strong>FinRate</strong> es una aplicación con fines exclusivamente informativos. No representamos ni estamos afiliados a ninguna institución gubernamental, autoridad monetaria ni financiera, ni a Binance. La aplicación no establece tasas de cambio: refleja valores de referencia obtenidos de fuentes públicas y verificables.</p>
+
+    <h2 id="origen">1. Origen de los datos que mostramos</h2>
+    <p>La aplicación presenta dos tipos de valores claramente diferenciados:</p>
+
+    <h3>1.1. Tasa oficial (BCV)</h3>
+    <p>Mostramos el dólar estadounidense y el euro de acuerdo con lo publicado por el Banco Central de Venezuela (BCV), obtenidos a través de un servicio intermediario (<a href="https://rates.dolarvzla.com" target="_blank" rel="noopener">rates.dolarvzla.com</a>) que replica la cifra oficial del BCV. No modificamos estas cifras. La tasa oficial del BCV es la única reconocida como tal dentro del sistema financiero venezolano; puedes verificarla directamente en <a href="https://www.bcv.org.ve" target="_blank" rel="noopener">bcv.org.ve</a>.</p>
+
+    <h3>1.2. Referencia USDT (mercado P2P)</h3>
+    <p>El USDT (Tether) es una stablecoin diseñada para mantener paridad con el dólar, pero no es dinero fiduciario ni equivale exactamente a un dólar oficial (1 USDT ≠ 1 USD).</p>
+    <p>La aplicación calcula una <strong>mediana</strong> a partir de hasta 20 anuncios de compra (BUY) publicados por anunciantes verificados en Binance P2P para el par USDT/VES, y actualiza este valor automáticamente cada 5 minutos. En el mercado P2P no existe un precio único: coexisten múltiples valores simultáneos según oferta y demanda. El número que ves es un resumen estadístico, no un precio garantizado ni fijado por nosotros.</p>
+    <p>FinRate no intermedia operaciones, no procesa pagos, no ofrece servicios de intercambio, no custodia fondos y no tiene afiliación ni respaldo de Binance. La mención de Binance es meramente descriptiva, para identificar la fuente de los datos.</p>
+    <p>Nada de lo mostrado en la aplicación constituye asesoría financiera, cambiaria o de inversión, ni una recomendación para comprar, vender o mantener divisas o criptoactivos. Cualquier decisión tomada con base en esta información es responsabilidad exclusiva del usuario.</p>
+
+    <h2 id="recopilamos">2. Qué información recopilamos</h2>
+    <p>FinRate funciona sin crear cuenta ni pedir datos de identificación. No solicitamos ni almacenamos nombre, correo electrónico, teléfono, documentos de identidad, ni información financiera (números de cuenta, tarjetas o billeteras).</p>
+    <p>El único dato técnico que sale de tu dispositivo hacia nuestros servidores es el que se describe en la siguiente sección, y solo si tú activas las notificaciones.</p>
+
+    <h2 id="notificaciones">3. Notificaciones push</h2>
+    <p>Las alertas diarias del BCV y las alertas de movimientos del USDT son opcionales. Si las activas desde la app:</p>
+    <ul>
+      <li>Tu dispositivo genera un <strong>token push de Expo</strong> (un identificador técnico del dispositivo, no de la persona) y lo enviamos a nuestro backend (alojado en Supabase) junto con tu preferencia (si quieres alertas de BCV, de USDT, o ambas).</li>
+      <li>Ese token se usa exclusivamente para poder enviarte la notificación a ese dispositivo. No está vinculado a tu nombre, tu correo ni ninguna otra identidad.</li>
+      <li>Si desactivas las notificaciones, actualizamos esa preferencia en el servidor; si quieres que el token se elimine por completo, puedes pedirlo escribiendo al correo de contacto (sección 11).</li>
+      <li>El texto de las notificaciones enviadas se guarda en nuestra base de datos (sin ningún identificador de quién lo recibió) únicamente para que, al abrir la app, puedas ver tu historial de notificaciones recientes.</li>
+    </ul>
+
+    <h2 id="almacenamiento">4. Almacenamiento en tu dispositivo</h2>
+    <p>Para que la app funcione rápido y también sin conexión, guardamos algunos datos únicamente en el almacenamiento local de tu teléfono (no en nuestros servidores):</p>
+    <ul>
+      <li>Tus monedas preferidas y la última tasa consultada (para mostrarla de inmediato al abrir la app, incluso sin internet).</li>
+      <li>Un historial local del precio del USDT que tu propio dispositivo fue observando, usado para armar las gráficas y el calendario.</li>
+      <li>El historial de notificaciones que has recibido.</li>
+    </ul>
+    <p>Esta información nunca sale de tu dispositivo salvo que la compartas tú mismo (por ejemplo, al exportar una conversión como imagen o PDF). Se borra automáticamente si desinstalas la app o si borras los datos de la app desde los ajustes de Android.</p>
+
+    <h2 id="terceros">5. Servicios de terceros que usamos</h2>
+    <p>FinRate no usa publicidad, no tiene SDKs de anuncios (como AdMob) y no ofrece suscripciones de pago: la app es gratuita en su totalidad. Los únicos servicios externos que usamos son de infraestructura, no de monetización:</p>
+    <ul>
+      <li><strong>Supabase</strong>: aloja nuestro backend (tokens de notificación y el historial de notificaciones enviadas). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Política de privacidad de Supabase</a>.</li>
+      <li><strong>rates.dolarvzla.com</strong>: fuente intermediaria de la tasa oficial BCV y de su historial.</li>
+      <li><strong>Binance P2P</strong>: fuente pública de anuncios para calcular la referencia de USDT.</li>
+      <li><strong>Expo (Expo Push Notifications)</strong>: servicio técnico que entrega las notificaciones push a tu dispositivo. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Política de privacidad de Expo</a>.</li>
+    </ul>
+    <p>Ninguno de estos servicios recibe tu nombre, correo, ubicación ni ningún dato personal identificable de tu parte.</p>
+
+    <h2 id="permisos">6. Permisos del sistema</h2>
+    <p>La app solicita únicamente los permisos indispensables para funcionar:</p>
+    <ul>
+      <li><strong>Internet / estado de red:</strong> para consultar y actualizar las tasas.</li>
+      <li><strong>Notificaciones (POST_NOTIFICATIONS):</strong> solo si activas las alertas; puedes revocarlo en cualquier momento desde los ajustes de Android.</li>
+      <li><strong>Funciones de compartir del sistema:</strong> para generar una imagen o PDF de tu conversión y enviarla por WhatsApp, correo u otra app que elijas tú.</li>
+    </ul>
+    <p>No solicitamos acceso a ubicación, contactos, cámara, micrófono, archivos, SMS ni sensores del equipo.</p>
+
+    <h2 id="seguridad">7. Seguridad</h2>
+    <p>Aplicamos prácticas de desarrollo seguro razonables y mantenemos las dependencias de la app actualizadas. Ningún sistema digital puede garantizar protección absoluta en todo momento; no asumimos responsabilidad por incidencias originadas en la infraestructura de red, en servicios de terceros o en el propio dispositivo del usuario.</p>
+
+    <h2 id="menores">8. Menores de edad</h2>
+    <p>FinRate no está dirigida específicamente a menores de edad y no recopila conscientemente datos personales de menores, en coherencia con que la app no recopila datos personales de ningún usuario.</p>
+
+    <h2 id="derechos">9. Tus derechos y cómo borrar tus datos</h2>
+    <p>Como no manejamos cuentas ni datos personales identificables, no existe un "perfil" que exportar o borrar en el sentido tradicional. Lo que sí puedes hacer:</p>
+    <ul>
+      <li><strong>Borrar todo lo guardado en tu teléfono:</strong> desinstala la app o borra sus datos desde Ajustes → Apps → FinRate → Almacenamiento.</li>
+      <li><strong>Eliminar tu token de notificaciones del servidor:</strong> desactiva las alertas desde la app, o escríbenos (sección 11) y lo eliminamos manualmente.</li>
+    </ul>
+
+    <h2 id="cambios">10. Cambios en esta política</h2>
+    <p>Esta política puede actualizarse para reflejar cambios normativos, técnicos o funcionales de la app. Cualquier cambio se publicará en esta misma página con su fecha de actualización. El uso continuado de la aplicación después de una actualización implica la aceptación de la nueva versión.</p>
+
+    <h2 id="contacto">11. Contacto</h2>
+    <p>¿Dudas, comentarios o una solicitud relacionada con esta política? Escríbenos a <a href="mailto:juandgg11o@gmail.com?subject=Consulta%20sobre%20FinRate">juandgg11o@gmail.com</a>. Este canal es solo para consultas sobre la aplicación y sus políticas; no atendemos por este medio operaciones de cambio ni transacciones financieras de ningún tipo.</p>
+  </main>
+  <a class="wa" href="https://wa.me/584246801808?text=Hola%2C%20tengo%20una%20duda%20sobre%20FinRate" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="wa-tip">¿Dudas? Escríbenos</span>
+    <span class="wa-btn">
+      <span class="wa-pulse"></span><span class="wa-pulse wa-pulse-2"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
